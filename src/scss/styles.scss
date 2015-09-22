@@ -1,0 +1,90 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0 $g;
+  font: 16px/24px $font;
+}
+
+h3 {
+  margin: g(2) 0 0;
+}
+
+input {
+  font: 16px/24px $font;
+  display: block;
+  width: 100%;
+  padding: $g $g 0;
+  border: none;
+  border-bottom: 2px solid #444;
+
+  &:focus {
+    outline: none;
+    border-color: #B95946;
+  }
+}
+
+
+.todo-app {
+  max-width: 450px;
+  margin: g(3) auto;
+}
+
+.completion-select {
+  text-align: center;
+
+  .filter {
+    padding: g(2) g(3);
+    background: #888;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    margin: 8px;
+
+    &.active {
+      background-color: #844;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: $g;
+  border-bottom: 2px solid #ddd;
+
+  .todo-item-checkbox {
+    flex-shrink: 0;
+    width: 20px;
+    margin-right: $g;
+  }
+
+  .todo-item-text {
+    flex-grow: 1;
+  }
+
+  .remove-item {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    background: #ccc;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+}
+
+.new-item {
+  margin-bottom: $g;
+}
